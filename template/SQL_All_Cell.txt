@@ -1,0 +1,22 @@
+SELECT TOP 1000 [BSC]
+,[CI]
+,[SAC]
+,[LAC]
+,[RAC]
+,[Site Name]
+,[Azimuth]
+,[Latitude]
+,[Longitude]
+,[Tilt]
+,[BSIC]
+,[Channel]
+,[PCI]
+,[RSI]
+,CASE WHEN [BCCH] =1
+THEN 'ИСТИНА'
+ELSE 'ЛОЖЬ'
+END [BCCH]
+,[Antenna_Height]
+FROM [rpdb].[dbo].[vExpSiemensFP]
+where [Site Name] like '{{bs_name}}_%' and [BCCH] = 1
+ORDER BY [SAC] ASC,[CI] ASC, [BCCH] ASC

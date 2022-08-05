@@ -1,0 +1,3 @@
+attribute one   {{obj.one}}
+attribute two   {{obj.two}}
+attribute three {{obj.three}}

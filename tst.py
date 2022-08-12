@@ -1,18 +1,9 @@
-from jinja2 import Template
+lst = [15, 16, 17]
 
+if len(lst) < 32:
+    for j in range(32 - len(lst)):
+        lst.append('65355')
 
-class TST:
-    lst_tst = []
+print(lst)
+print(len(lst))
 
-    def __init__(self, lst_inp):
-        self.one = lst_inp[0]
-        self.two = lst_inp[1]
-        self.three = lst_inp[2]
-
-        self.__class__.lst_tst.append(self)
-
-
-my_obj = TST([15, 16, 17])
-
-temp = Template(open('template/txt_temp.txt').read()).render(obj=TST.lst_tst[0])
-print(temp)

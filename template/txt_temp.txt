@@ -1,3 +1,8 @@
-attribute one   {{obj.one}}
-attribute two   {{obj.two}}
-attribute three {{obj.three}}
+
+{% for i in lst %}
+  digit {{i.value_2}} index = {{loop.index}}
+  {% if i == '25' %}
+  this is {{i.value_2}}
+  {% endif %}
+{% endfor %}
+

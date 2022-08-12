@@ -12,10 +12,6 @@ SELECT TOP 1000 [BSC]
 ,[Channel]
 ,[PCI]
 ,[RSI]
-,CASE WHEN [BCCH] =1
-THEN 'ИСТИНА'
-ELSE 'ЛОЖЬ'
-END [BCCH]
 ,[Antenna_Height]
 FROM [rpdb].[dbo].[vExpSiemensFP]
 where [Site Name] like '{{bs_name}}_%' and [BCCH] = 1

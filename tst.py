@@ -1,10 +1,18 @@
-a = 'aba'
+def config_selection(obj):
 
-def is_isogram(string):
-    for i in string:
-        if string.count(i) > 1:
-            return False
-    else:
-        return True
+    first_elem = list(obj)[0]  # '1,4' // '1'  формат который получается
+    if len(obj) == 2 and len(first_elem) == 3:
+        return '2x2'
 
-print(is_isogram(a))
+    elif len(obj) == 2 and len(first_elem) == 1:
+        return '2x1'
+
+    elif len(obj) == 1 and len(first_elem) == 3:
+        return '1x2'
+
+    elif len(obj) == 1 and len(first_elem) == 1:
+        return '1x1'
+
+
+a = [{'51': '1,4'}]
+print(config_selection(a))

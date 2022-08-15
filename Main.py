@@ -2,7 +2,6 @@ import pandas as pd
 import pyodbc
 import os
 import datetime
-from sqlalchemy import create_engine
 from jinja2 import Template
 from Secret import *
 from Cell_Obj import CellObj
@@ -55,12 +54,12 @@ CellObj.correct_arfcn_list()
 path_folder = f'C://Python/ZTE_LTE/{user_bs_name[:11]} {datetime.datetime.now().date()}'
 os.mkdir(path_folder)
 
-temp_parameter = Template(open('template/LTE_parametr.txt').read())
+temp_parameter = Template(open('template/LTE_parameter.txt').read())
 rend_parameter = temp_parameter.render(SubNetwork=user_subnetwork,
                                        MEID=user_meid,
                                        list_cell=CellObj.lte_cell)
 
-file_parameter = open(f'{path_folder}/{user_bs_name[:11]}.txt', 'w')
+file_parameter = open(f'{path_folder}/Parameter_{user_bs_name[:11]}.txt', 'w')
 file_parameter.write(rend_parameter)
 
 
@@ -69,6 +68,6 @@ if user_choice.lower() != 'parameter':
     rend_cell = temp_cell.render(SubNetwork=user_subnetwork,
                                  MEID=user_meid,
                                  list_cell=CellObj.lte_cell)
-    file_cell = open(f'{path_folder}/{user_bs_name[:11]}.txt', 'w')
+    file_cell = open(f'{path_folder}/Create_LTE__{user_bs_name[:11]}.txt', 'w')
     file_cell.write(rend_cell)
 

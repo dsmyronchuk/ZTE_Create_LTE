@@ -180,8 +180,8 @@ class CellObj:
             self.prachFMRecOnTASwch = 1
             self.prachSupFarCoverSwch = 0
             self.freqBandInd = '3'
-            self.earfcnUI = '1760'
-            self.earfcnDI = '1855'
+            self.earfcnUl = '1760'
+            self.earfcnDl = '1855'
             self.configDRXTimerForNSA = '0'
 
             self.threshSvrLow = 6
@@ -209,8 +209,8 @@ class CellObj:
             self.prachFMRecOnTASwch = 0
             self.prachSupFarCoverSwch = 1
             self.freqBandInd = '7'
-            self.earfcnUI = '2515'
-            self.earfcnDI = '2635'
+            self.earfcnUl = '2515'
+            self.earfcnDl = '2635'
             self.configDRXTimerForNSA = '1000'
 
             self.threshSvrLow = 6

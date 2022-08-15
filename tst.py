@@ -1,9 +1,10 @@
-lst = [15, 16, 17]
+a = 'aba'
 
-if len(lst) < 32:
-    for j in range(32 - len(lst)):
-        lst.append('65355')
+def is_isogram(string):
+    for i in string:
+        if string.count(i) > 1:
+            return False
+    else:
+        return True
 
-print(lst)
-print(len(lst))
-
+print(is_isogram(a))

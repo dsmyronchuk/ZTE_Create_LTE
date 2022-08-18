@@ -426,16 +426,16 @@ class CellObj:
 
         def config_selection(obj):
             first_elem = list(obj.rru_pipe)[0]                 # '1,4' // '1'  формат который получается
-            if len(obj.rru_pipe) == 2 and len(first_elem) == 3:
+            if len(obj.rru_pipe) == 2 and len(obj.rru_pipe[first_elem]) == 3:
                 return '2x2'
 
-            elif len(obj.rru_pipe) == 2 and len(first_elem) == 1:
+            elif len(obj.rru_pipe) == 2 and len(obj.rru_pipe[first_elem]) == 1:
                 return '2x1'
 
-            elif len(obj.rru_pipe) == 1 and len(first_elem) == 3:
+            elif len(obj.rru_pipe) == 1 and len(obj.rru_pipe[first_elem]) == 3:
                 return '1x2'
 
-            elif len(obj.rru_pipe) == 1 and len(first_elem) == 1:
+            elif len(obj.rru_pipe) == 1 and len(obj.rru_pipe[first_elem]) == 1:
                 return '1x1'
 
         def power_selection(obj):

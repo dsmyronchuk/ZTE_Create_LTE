@@ -77,7 +77,6 @@ class CellObj:
             self.closeFrameRatio = 20
             self.cellBW = '1.5'
 
-
         elif self.Bandwidth == '5':
             self.nB = 1
             self.bandWidthDl = 2
@@ -95,7 +94,6 @@ class CellObj:
             self.noneStdBwPwrCtrl = 14
             self.closeFrameRatio = 20
             self.cellBW = '1.5'             # под вопросом, на сети нет
-
 
         elif self.Bandwidth == '10':
             self.upInterfFreqEffThr = 4

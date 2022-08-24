@@ -1,40 +1,8 @@
-{{SubNetwork}}
-{{MEID}}
-{{list_cell[0].ENBFunctionFDD}}
-
-{#
-{{i.EUtranCellFDD}}
-{{i.upInterfFreqEffThr}}
-{{i.nB}}
-{{i.bandWidthDl}}
-{{i.bandWidthUl}}
-{{i.maxUeRbNumDl}}
-{{i.maxUeRbNumUl}}
-{{i.offsetAngle}}
-{{i.pucchBlankNum}}
-{{i.numberOfRAPreambles}}
-{{i.ncs}}
-{{i.sizeOfRAPreamblesGroupA}}
-{{i.macNonContenPreamble}}
-{{i.prachFMRecOnTASwch}}
-{{i.prachSupFarCoverSwch}}
-{{i.prachConfigIndex}}
-{{i.noneStdBwPwrCtrl}}
-{{i.threshSvrLow}}
-{{i.cellReselectionPriority}}
-{{i.eutranRslPara_eMTCInterReselPrio_1}}
-{{i.eutranRslPara_eMTCInterReselPrio_2}}
-{{i.eutranRslPara_eMTCInterThrdXHigh}}
-{{i.eutranRslPara_interReselPrio_1}}
-{{i.eutranRslPara_interReselPrio_2}}
-{{i.eutranRslPara_interThrdXHigh_1}}
-{{i.eutranRslPara_interThrdXHigh_2}}
-{{i.eutranRslPara_interCarriFreq_1}}
-{{i.eutranRslPara_interCarriFreq_2}}
-{{i.eutranRslPara_freqBandInd_1}}
-{{i.eutranRslPara_freqBandInd_2}}
-{{i.eMTCIntraReselPrio}}
-#}
+enbName = {{list_cell[0].enbName}}
+SubNetwork = {{SubNetwork}}
+MEID = {{MEID}}
+ENBFunctionFDD = {{list_cell[0].ENBFunctionFDD}}
+Type parameter = {{list_cell[0].user_bs_type}}
 
 {# Общие параметры для всех LTE BS #}
 

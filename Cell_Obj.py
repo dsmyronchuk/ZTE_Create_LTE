@@ -109,6 +109,7 @@ class CellObj:
             self.bandWidthUl = 3
             self.maxUeRbNumDl = 50
             self.maxUeRbNumUl = 23
+            self.noneStdBwPwrCtrl = 0
             self.closeFrameRatio = 30
             self.cellBW = '5'
 
@@ -124,6 +125,7 @@ class CellObj:
             self.bandWidthUl = 4
             self.maxUeRbNumDl = 75
             self.maxUeRbNumUl = 28
+            self.noneStdBwPwrCtrl = 0
             self.closeFrameRatio = 40
             self.cellBW = '7.5'
 
@@ -139,6 +141,7 @@ class CellObj:
             self.bandWidthUl = 5
             self.maxUeRbNumDl = 100
             self.maxUeRbNumUl = 33
+            self.noneStdBwPwrCtrl = 0
             self.closeFrameRatio = 40
             self.cellBW = '10'
 
@@ -449,7 +452,7 @@ class CellObj:
                 return ['46', '18.2']
 
             elif obj.Channel == 1700 and obj.rru_config == '1x2':       # 47.8 под вопросом, возможно нужно будет 49
-                return ['47.8', '15.2']
+                return ['49', '15.2']
 
             elif obj.Channel == 3676 and obj.rru_config == '1x2':
                 return ['46', '18.2']

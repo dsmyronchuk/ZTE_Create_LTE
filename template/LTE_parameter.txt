@@ -57,7 +57,7 @@ UPDATE:MOC="ControlPlaneTimer",MOI="SubNetwork={{SubNetwork}},MEID={{MEID}},ENBF
 {# Параметры для сот #}
 
 {% for i in list_cell %}
-UPDATE:MOC="EUtranCellFDD",MOI="SubNetwork={{SubNetwork}},MEID={{MEID}},ENBFunctionFDD={{i.ENBFunctionFDD}},EUtranCellFDD={{i.EUtranCellFDD}}",ATTRIBUTES="reuseMagicRadioSwch=0,qamSwch=1,SubNetwork={{SubNetwork}},upInterfFreqEffThr={{i.upInterfFreqEffThr}},ENBFunctionFDD={{i.ENBFunctionFDD}},rlfSwitch=1,nB={{i.nB}},MEID={{MEID}},bandWidthUl={{i.bandWidthUl}},EUtranCellFDD={{i.EUtranCellFDD}},cellReservedForOptUse=0;0;0;0;0;0,cellRSPortNum=1,deRohcSch=0,voLTESwch=0,bandWidthDl={{i.bandWidthDl}},offsetAngle={{i.offsetAngle}},cFI=0,maxUeRbNumDl={{i.maxUeRbNumDl}},qam64DemSpIndUl=1,pb=0,csfbMethdofUMTS=1,tm34T4RSwch=0,flagSwiMode=6,maxUeRbNumUl={{i.maxUeRbNumUl}},tm44T4RSwch=0",EXTENDS="";
+UPDATE:MOC="EUtranCellFDD",MOI="SubNetwork={{SubNetwork}},MEID={{MEID}},ENBFunctionFDD={{i.ENBFunctionFDD}},EUtranCellFDD={{i.EUtranCellFDD}}",ATTRIBUTES="reuseMagicRadioSwch=0,qamSwch=1,SubNetwork={{SubNetwork}},upInterfFreqEffThr={{i.upInterfFreqEffThr}},ENBFunctionFDD={{i.ENBFunctionFDD}},rlfSwitch=1,nB={{i.nB}},MEID={{MEID}},bandWidthUl={{i.bandWidthUl}},EUtranCellFDD={{i.EUtranCellFDD}},cellReservedForOptUse=0;0;0;0;0;0,cellRSPortNum={{i.cellRSPortnum}},deRohcSch=0,voLTESwch=0,bandWidthDl={{i.bandWidthDl}},offsetAngle={{i.offsetAngle}},cFI=0,maxUeRbNumDl={{i.maxUeRbNumDl}},qam64DemSpIndUl=1,pb=0,csfbMethdofUMTS=1,tm34T4RSwch=0,flagSwiMode=6,maxUeRbNumUl={{i.maxUeRbNumUl}},tm44T4RSwch=0",EXTENDS="";
 {% endfor %}
 
 {% for i in list_cell %}

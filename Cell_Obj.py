@@ -463,10 +463,10 @@ class CellObj:
 
         def ECellEquipmentFunction_selection(obj):
             if obj.Channel == 3676:
-                return CellObj.lte_cell.index(obj)
+                return obj.ENBCell_id
 
             else:
-                return obj.ENBCell_id
+                return CellObj.lte_cell.index(obj)
 
         def MIMO_selection(obj):     # MIMO 2x2 // 4x4
             if obj.rru_config == '2x2':

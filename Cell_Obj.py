@@ -42,12 +42,14 @@ class CellObj:
         self.prach_index()
         self.eutrancellmeasurement()
 
+        self.__class__.lte_cell.append(self)
+
         if self.user_choice.lower() != 'parameter':
             self.rru_pipe_func()
             self.parameter_cell()
 
         self.full_name = self.correct_name_cell()
-        self.__class__.lte_cell.append(self)
+
 
     def create_offset(self):
         azz = self.Azimuth[:-1]
@@ -81,19 +83,19 @@ class CellObj:
             self.nB = 1
             self.bandWidthDl = 2
             self.bandWidthUl = 2
-            self.maxUeRbNumDl = 24
-            self.maxUeRbNumUl = 14
+            self.maxUeRbNumDl = 25
+            self.maxUeRbNumUl = 15
             self.pucchBlankNum = 0
             self.upInterfFreqEffThr = 4
             self.nB = 1
             self.bandWidthDl = 2
             self.bandWidthUl = 2
-            self.maxUeRbNumDl = 24
-            self.maxUeRbNumUl = 14
+            self.maxUeRbNumDl = 25
+            self.maxUeRbNumUl = 15
             self.pucchBlankNum = 0
             self.noneStdBwPwrCtrl = 14
             self.closeFrameRatio = 20
-            self.cellBW = '1.5'             # под вопросом, на сети нет
+            self.cellBW = '2.5'
 
         elif self.Bandwidth == '10':
             self.upInterfFreqEffThr = 4

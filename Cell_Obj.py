@@ -451,7 +451,7 @@ class CellObj:
             elif obj.Channel == 3676 and obj.rru_config == '2x1':
                 return ['46', '18.2']
 
-            elif obj.Channel == 1700 and obj.rru_config == '1x2':       # 47.8 под вопросом, возможно нужно будет 49
+            elif obj.Channel == 1700 and obj.rru_config == '1x2':
                 return ['49', '15.2']
 
             elif obj.Channel == 3676 and obj.rru_config == '1x2':
